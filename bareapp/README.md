@@ -26,10 +26,10 @@ The directory under which the files are installed defaults to `/usr/local/webos`
 You can install them elsewhere by supplying a value for `WEBOS_INSTALL_ROOT`
 when invoking `cmake`. For example:
 
-    $ cmake -D WEBOS_INSTALL_ROOT:PATH=$HOME/projects/webos-pro ..
+    $ cmake -D WEBOS_INSTALL_ROOT:PATH=$HOME/projects/webos-...
     $ make install
 
-will install the files in subdirectories of `$HOME/projects/webos-pro`.
+will install the files in subdirectories of `$HOME/projects/webos-...`.
 
 Specifying `WEBOS_INSTALL_ROOT` also causes `pkg-config` to look in that tree
 first before searching the standard locations. You can specify additional
@@ -51,7 +51,7 @@ Copyright and License Information
 Unless otherwise specified, all content, including all source code files and
 documentation files in this repository are:
 
-Copyright (c) 2008-2018 LG Electronics, Inc.
+Copyright (c) 2008-2019 LG Electronics, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
