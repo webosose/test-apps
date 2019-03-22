@@ -8,5 +8,8 @@
 	"icon": "icon.png",
 	"iconColor":"#E42E28",
 	"disallowScrollingInMainFrame": false,
+	"requiredPermissions": [
+		"media"
+	],
 	"uiRevision": 2
 }
