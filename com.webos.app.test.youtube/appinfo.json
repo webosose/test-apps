@@ -7,5 +7,6 @@
 	"main": "index.html",
 	"icon": "icon.png",
 	"iconColor":"#E42E28",
-	"uiRevision": 2
+	"uiRevision": 2,
+	"disallowScrollingInMainFrame": false
 }
