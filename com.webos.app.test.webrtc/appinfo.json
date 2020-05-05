@@ -1,0 +1,12 @@
+{
+    "id": "com.webos.app.test.webrtc",
+    "title": "Test WebRTC",
+    "vendor": "LG Silicon Valley Labs",
+    "type": "web",
+    "version": "1.0.0",
+    "main": "index.html",
+    "icon": "icon.png",
+    "uiRevision": 2,
+    "allowVideoCapture": true,
+    "allowAudioCapture": true
+}

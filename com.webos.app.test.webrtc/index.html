@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Test WebRTC</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    <body class="enyo-unselectable">
+        <script>
+            function displayJitsiSite() {
+                document.getElementById("menu_text").innerText = "Loading...";
+                document.getElementById("site_options").style = "display: none;";
+
+                window.location.href = "https://meet.jit.si/";
+            }
+
+            function displayAppRtcOptions() {
+                document.getElementById("site_options").style = "display: none;";
+                document.getElementById("apprtc_options").style = "display: block;";
+            }
+
+            function displayAppRtcSite(selectedCodec) {
+                document.getElementById("menu_text").innerText = "Loading...";
+                document.getElementById("apprtc_options").style = "display: none;";
+
+                var URL = "https://appr.tc/?vrc=" + selectedCodec;
+                window.location.href = URL;
+            }
+
+            function handleAppRtcOptions() {
+                var selectedCodec = document.getElementById("codecOptions").value;
+                if (selectedCodec != "Select...") {
+                    displayAppRtcSite(selectedCodec);
+                } else {
+                  alert("Please select a codec type from options");
+                }
+            }
+
+            function handleSiteOptions(selectedSite) {
+                if (selectedSite == "jitsi") {
+                    displayJitsiSite();
+                } else if(selectedSite == "apprtc") {
+                    displayAppRtcOptions();
+                }
+            }
+
+            function displaySiteOptions() {
+                document.getElementById("apprtc_options").style = "display: none;";
+                document.getElementById("site_options").style = "display: block;";
+            }
+        </script>
+
+        <h1 id="menu_text" style="color:red; font-family: Arial, Helvetica, sans-serif;">Select Test Site</h1>
+        <br><br><br>
+        <div id="site_options" style="display: block;">
+            <form>
+                <div>
+				    <input type="radio" name="browser" onclick="handleSiteOptions(this.value)" value="jitsi">
+				    <text style="color:darkgrey; font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Test with Jitsi Site</text>
+			    </div>
+                <div>
+				    <input type="radio" name="browser" onclick="handleSiteOptions(this.value)" value="apprtc"/>
+					<text style="color:darkgrey; font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Test with AppRTC Site</text>
+				</div>
+            </form>
+        </div>
+
+        <div id="apprtc_options" style="display: none;">
+            <label for="codecs" style="color:darkgrey; font-size: 25px; font-family: Arial, Helvetica, sans-serif;">Select a Codec type to Recieve Data:</label>
+            <select id="codecOptions" onchange="handleAppRtcOptions();">
+                <option>Select</option>
+                <option>VP8</option>
+                <option>VP9</option>
+                <option>H264</option>
+            </select>
+            <input id="go_back" type="button" value="Go Back" onclick="displaySiteOptions();"/>
+        </div>
+    </body>
+</html>
