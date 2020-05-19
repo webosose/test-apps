@@ -20,10 +20,6 @@
                 display: none;
                 position: relative; left: 100px;
             }
-            #site_window {
-                display: block;
-                width: 100%; height: 935px;
-            }
             #select_label {
                 position: relative; left: 50px;
                 color:darkgrey; font-family: Arial, Helvetica, sans-serif; font-size: 25px;
@@ -96,10 +92,7 @@
                     alert("Please select a site to start!");
                     return;
                 }
-                document.getElementById("site_window").src = siteUrl;
-                return;
-
-                document.getElementById("site_window").location.replace(siteUrl);
+                window.location.href = siteUrl;
             }
         </script>
 
@@ -132,8 +125,5 @@
             </form>
         </div>
         <br>
-        <iframe id="site_window" allow="geolocation; microphone; camera; midi; encrypted-media" allowfullscreen>
-            <div id="loading_msg" style="color:red;">Loading...</div>
-        </iframe>
     </body>
 </html>
