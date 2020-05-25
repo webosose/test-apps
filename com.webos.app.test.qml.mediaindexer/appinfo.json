@@ -1,0 +1,10 @@
+{
+    "id": "com.webos.mediaindexer.app.qml",
+    "version": "1.0.0",
+    "vendor": "LG Electronics",
+    "type": "qml",
+    "main": "main.qml",
+    "title": "Media-Indexer Test App",
+    "icon": "icon.png",
+    "requiredPermissions" : ["all"]
+}
