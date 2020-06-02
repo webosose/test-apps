@@ -18,14 +18,14 @@
             }
             #apprtc_options {
                 display: none;
-                position: relative; left: 100px;
+                position: relative; left: 20px;
             }
             #select_label {
-                position: relative; left: 50px;
+                position: relative; left: 10px;
                 color:darkgrey; font-family: Arial, Helvetica, sans-serif; font-size: 25px;
             }
             #select_element {
-                position: relative; left: 100px;
+                position: relative; left: 20px;
                 color:darkgrey; font-family: Arial, Helvetica, sans-serif; font-size: 25px;
             }
             .codec_options {
@@ -47,13 +47,14 @@
                     }
                 }, false);
 
-                document.getElementById("jitsi_radio").checked = false;
+                document.getElementById("talky_radio").checked = false;
                 document.getElementById("apprtc_radio").checked = false;
+                document.getElementById("enter_text").value = "https://";
             }
 
-            function displayJitsiSite() {
+            function displayTalkySite() {
                 document.getElementById("apprtc_options").style = "display: none;";
-                document.getElementById("enter_text").value = "https://meet.jit.si/";
+                document.getElementById("enter_text").value = "https://talky.io/";
             }
 
             function displayAppRtcOptions() {
@@ -79,8 +80,8 @@
             }
 
             function handleSiteOptions(selectedSite) {
-                if (selectedSite == "jitsi") {
-                    displayJitsiSite();
+                if (selectedSite == "talky") {
+                    displayTalkySite();
                 } else if(selectedSite == "apprtc") {
                     displayAppRtcOptions();
                 }
@@ -105,13 +106,10 @@
         <div id="site_options" style="display: block;">
             <form>
                 <div style="display: inline; position:relative; left:50px; top:10px;">
-                    <input id="jitsi_radio" type="radio" name="browser" onclick="handleSiteOptions(this.value)" value="jitsi">
-                    <text class="site_names_text">Jitsi Meet</text>
-                    <div style="display: inline; position:relative; left:50px;">
+                    <div style="display: inline; position:relative; left:10px;">
                         <input id="apprtc_radio"  type="radio" name="browser" onclick="handleSiteOptions(this.value)" value="apprtc"/>
                         <text class="site_names_text">AppRTC</text>
                     </div>
-
                     <div id="apprtc_options">
                         <label id="select_label" for="codecs"> Select a Codec Type : </label>
                         <select id="select_element" onchange="handleAppRtcOptions(this.value);">
@@ -121,7 +119,11 @@
                             <option class="codec_options">H264</option>
                         </select>
                     </div>
-			    </div>
+                    <div style="display: inline; position:relative; left:150px;">
+                        <input id="talky_radio" type="radio" name="browser" onclick="handleSiteOptions(this.value)" value="talky">
+                        <text class="site_names_text">Talky</text>
+                    </div>
+                </div>
             </form>
         </div>
         <br>
