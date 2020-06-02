@@ -15,11 +15,15 @@ ListModel {
     function appendItem(item, query) {
         var _info = "--";
         var _title = "--";
+        var _thumbnail = ""
+        var _type = "";
 
         switch (query) {
         case "/audio":
             _title = item.title;
             _info = item.artist + " - " + item.album;
+            _thumbnail = item.thumbnail
+            _type = item.type;
             break;
         case "/artists":
             _title = item.album_artist;
@@ -42,6 +46,8 @@ ListModel {
 
         mediaItemModel.append({ uri: item.uri,
                                 title: _title,
-                                info: _info });
+                                info: _info,
+                                thumbnail: _thumbnail,
+                                type: _type});
     }
 }
