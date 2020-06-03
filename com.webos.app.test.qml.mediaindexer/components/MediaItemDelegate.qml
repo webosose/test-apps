@@ -7,23 +7,11 @@ Rectangle {
 
     signal clicked(string uri)
 
-    Image {
-        id: album_art
-        anchors {
-            left: parent.left
-	    leftMargin: parent.height / 2
-            top: parent.top
-        }
-        width: type == "audio" ? parent.height : 0;
-        height: parent.height;
-        source: thumbnail
-    }
-
     Text {
         id: titleField
         anchors {
-            left: album_art.right//parent.left
-            leftMargin: parent.height / 4
+            left: parent.left
+            leftMargin: parent.height / 2
             top: parent.top
         }
         font {
@@ -37,8 +25,8 @@ Rectangle {
     Text {
         id: infoField
         anchors {
-            left: album_art.right//parent.left
-            leftMargin: parent.height / 4
+            left: parent.left
+            leftMargin: parent.height / 2
             bottom: parent.bottom
         }
         font {
