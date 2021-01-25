@@ -8,5 +8,11 @@
     "icon": "icon.png",
     "uiRevision": 2,
     "allowVideoCapture": true,
-    "allowAudioCapture": true
+    "allowAudioCapture": true,
+    "requiredPermissions": [
+      "audio.operation",
+      "media.operation",
+      "mediapipeline.resourcemanagement",
+      "mediapipeline.operation"
+    ]
 }
