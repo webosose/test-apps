@@ -10,6 +10,10 @@
 	"uiRevision": 2,
 	"disallowScrollingInMainFrame": false,
         "requiredPermissions": [
-            "mediapipeline.resourcemanagement","mediapipeline.operation","mediacontroller.operation"
+            "mediapipeline.resourcemanagement",
+            "mediapipeline.operation",
+            "mediacontroller.operation",
+            "mediacontroller.query",
+            "mediacontroller.management"
         ]
 }
