@@ -1,0 +1,12 @@
+{
+  "id": "com.webos.app.test.v8snapshot",
+  "version": "1.0.0",
+  "vendor": "LG Electronics, Inc.",
+  "type": "web",
+  "main": "index.html",
+  "title": "Test v8 snapshot",
+  "uiRevision": "2",
+  "icon": "icon.png",
+  "visible": false,
+  "v8SnapshotFile": "snapshot_blob.bin"
+}

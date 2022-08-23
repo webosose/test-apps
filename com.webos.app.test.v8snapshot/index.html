@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>
+      Snapshot test
+    </title>
+<style>
+body {
+    color: white;
+}
+
+div.container {
+    height: 100%;
+    position: relative }
+
+div.container p {
+    font-size: 80px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+.red {
+  background: #d1001f;
+}
+
+.green {
+  background: #4b6043;
+}
+
+</style>
+    <body id="body">
+      <div class="container"> <p id="snapshot"></p></div>
+      <script>
+        var msg = "V8 snapshot is not used.";
+        var color = "red";
+        try {
+          if (snapshot_obj.IsSnapshotUsed()) {
+            msg = "V8 snapshot is used.";
+            color = "green";
+          }
+        } catch (e) {
+          console.log(e);
+        }
+        document.getElementById("snapshot").innerText = msg;
+        document.getElementById("body").className = color;
+        console.log(msg);
+      </script>
+    </body>
+</html>
