@@ -15,7 +15,7 @@ include(webOS/webOS)
 webos_modules_init(1 0 0 QUALIFIER RC4)
 
 add_custom_command(OUTPUT ${PROJECT_BINARY_DIR}/snapshot_blob.bin
-  COMMAND  ${V8_MKSNAPSHOT} --startup-blob snapshot_blob.bin ${CMAKE_SOURCE_DIR}/snapshot_test.js
+  COMMAND  ${V8_MKSNAPSHOT} --startup-blob snapshot_blob.bin --turbo_instruction_scheduling ${CMAKE_SOURCE_DIR}/snapshot_test.js
   DEPENDS snapshot_test.js)
 
 add_custom_target(mksnapshot ALL
