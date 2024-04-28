@@ -1,0 +1,22 @@
+{
+    "id": "com.webos.app.test.mediacontroller",
+    "title": "Media Controller Test App",
+    "vendor": "LGSI R&D Lab",
+    "type": "web",
+    "version": "0.0.1",
+    "main": "index.html",
+    "icon": "icon.png",
+    "iconColor": "#ff4a4a",
+    "uiRevision": 2,
+    "enableBackgroundRun": true,
+    "allowVideoCapture": true,
+    "allowAudioCapture": true,
+    "requiredPermissions": [
+        "audio.operation",
+        "media.operation",
+        "mediapipeline.operation",
+        "mediacontroller.operation",
+        "mediacontroller.query",
+        "mediacontroller.management"
+    ]
+}
