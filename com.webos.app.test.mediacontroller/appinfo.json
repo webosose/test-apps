@@ -11,6 +11,8 @@
     "enableBackgroundRun": true,
     "allowVideoCapture": true,
     "allowAudioCapture": true,
+    "disallowScrollingInMainFrame": false,
+    "useNativeScroll" : true,
     "requiredPermissions": [
         "audio.operation",
         "media.operation",
